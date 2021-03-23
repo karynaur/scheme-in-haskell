@@ -2,13 +2,9 @@ module Main where
 import System.Environment 
 
 main :: IO ()
-main = do 
-   args <- getArgs
-   let a = (read (args !! 0) :: Int)
-   let b = (read (args !! 1) :: Int)
-   let c = a + b
+main = do args <- getArgs
+          print ((read $ args!!0) + (read $ args!!1))
    
-   putStrLn ("Hello, " ++ show c :: String)
-   putStrLn ("Write Something :)")
-   line <- getLine
-   putStrLn ("Bruh you just typed " ++ line)
+          putStrLn ("Write Something :)")
+          line <- getLine
+          putStrLn ("Bruh you just typed " ++ line)
